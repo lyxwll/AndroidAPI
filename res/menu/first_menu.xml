@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 主菜单 -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <!-- 字体菜单子项 -->
+    <item android:id="@+id/font_item"
+        android:title="@string/font_size_title">
+        <menu >
+            <group android:checkableBehavior="single"
+                android:id="@+id/font_group"
+                android:orderInCategory="1">
+                <item android:id="@+id/font_10"
+                    android:title="@string/font_size_10"/>
+                <item android:id="@+id/font_12"
+                    android:title="@string/font_size_12"></item>
+                <item android:id="@+id/font_14"
+                    android:title="@string/font_size_14"></item>
+                <item android:id="@+id/font_16"
+                    android:title="@string/font_size_16"></item>
+                <item android:id="@+id/font_18"
+                    android:title="@string/font_size_18"></item>
+            </group>
+        </menu>
+   	</item>
+    
+    <!-- 普通菜单子项 -->
+    <item android:id="@+id/normal_item"
+        android:title="@string/normal_menu">
+    </item>
+    
+    <!-- 颜色菜单子项 -->
+    <item android:id="@+id/color_item"
+        android:title="@string/color_menu"
+        android:titleCondensed="@string/color_menu_title">
+        <menu >
+            <group android:checkableBehavior="all"
+                android:id="@+id/color_group"
+                android:orderInCategory="1">
+                <item android:id="@+id/color_red"
+                    android:title="@string/color_red"/>
+                <item android:id="@+id/color_green"
+                    android:title="@string/color_grenn"/>
+                <item android:id="@+id/color_blue"
+                    android:title="@string/color_blue"/>
+            </group>
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 在线性布局中定义了表格布局 -->
+    <!-- 第一个tablelayout:第二列可以收缩,第三列可以拉伸 -->
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:shrinkColumns="1"
+        android:stretchColumns="2" >
+
+        <!-- 直接添加按钮,它会单独占一行 -->
+
+        <Button
+            android:id="@+id/ok1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/single_line" />
+
+        <!-- 添加一个表格行 -->
+
+        <TableRow>
+
+            <!-- 为该表格添加三个按钮 -->
+
+            <Button
+                android:id="@+id/ok2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/noraml_button" />
+
+            <Button
+                android:id="@+id/ok3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/strech_button" />
+
+            <Button
+                android:id="@+id/ok4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shrink_button" />
+        </TableRow>
+
+        <!-- 第二个tablelayout:指定第2列可以被隐藏 -->
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:collapseColumns="1" >
+
+            <!-- 直接添加按钮,它会单独占一行 -->
+
+            <Button
+                android:id="@+id/ok5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/single_line" />
+
+            <!-- 添加一个表格行 -->
+
+            <TableRow>
+
+                <!-- 为该表格添加三个按钮 -->
+
+                <Button
+                    android:id="@+id/ok6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/noraml_button" />
+
+                <Button
+                    android:id="@+id/ok7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/strech_button" />
+
+                <Button
+                    android:id="@+id/ok8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/shrink_button" />
+            </TableRow>
+
+            <!-- 第三个tablelayout:指定第2列,第3列可以被拉伸 -->
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="1,2" >
+
+                <!-- 直接添加按钮,它会单独占一行 -->
+
+                <Button
+                    android:id="@+id/ok9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/single_line" />
+                <!-- 添加一个表格行 -->
+
+                <TableRow>
+
+                    <!-- 为该表格添加三个按钮 -->
+
+                    <Button
+                        android:id="@+id/ok10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/noraml_button" />
+
+                    <Button
+                        android:id="@+id/ok11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/strech_button" />
+
+                    <Button
+                        android:id="@+id/ok12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/shrink_button" />
+                </TableRow>
+
+                <TableRow>
+
+                    <!-- 为该表格添加2个按钮 -->
+
+                    <Button
+                        android:id="@+id/ok13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/noraml_button" />
+
+                    <Button
+                        android:id="@+id/ok14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/strech_button" />
+                </TableRow>
+            </TableLayout>
+        </TableLayout>
+    </TableLayout>
+
+</LinearLayout>

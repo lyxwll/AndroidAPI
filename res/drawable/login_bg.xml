@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:shape="rectangle">
+    
+    <!-- 填充 -->
+    <solid android:color="@color/common_white"/>
+    <!-- 圆角 -->
+    <corners android:radius="10dip"/>
+    <!-- 描边 -->
+    <stroke android:width="1px" android:color="@color/common_blue"/>
+    <!-- 内间距 -->
+    <padding 
+        android:left="10dip"
+        android:right="10dip"
+        android:top="5dip"
+        android:bottom="5dip"/>
+    
+    <!-- 渐变 -->
+    <gradient 
+        android:startColor="@color/common_blue_word"
+        android:centerColor="@color/common_grey"
+        android:endColor="@color/common_white"/>
+    
+    
+    <!-- 尺寸大小,通常建议不要在这里设置尺寸 -->
+   <!--  <size 
+        android:width="100dip"
+        android:height="60dip"/> -->
+    
+
+</shape>

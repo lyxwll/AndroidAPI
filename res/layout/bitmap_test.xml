@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+	<ImageView 
+	    android:id="@+id/bit_imageview"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@color/common_grey_background"
+	    android:src="@drawable/c1"
+	    android:contentDescription="@string/bit_image"/>
+
+	<Button
+	    android:id="@+id/bitmap_btn"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:text="@string/bit_btn" />
+    
+</LinearLayout>

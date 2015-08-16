@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <!--相对布局  -->
+    
+    <!-- 首先定义一个中间的控件:作为标记 -->
+    <ImageView
+        android:id="@+id/center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_launcher" 
+        android:layout_centerInParent="true"/>
+    
+    <!--左边  -->
+	<ImageView 
+	    android:id="@+id/lefgt"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:background="@drawable/ic_launcher"
+	    android:layout_toLeftOf="@id/center"
+	    android:layout_alignTop="@id/center"/>
+    
+	<!--上  -->
+	<ImageView 
+	    android:id="@+id/top"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:background="@drawable/ic_launcher"
+	    android:layout_above="@id/center"
+	    android:layout_alignLeft="@id/center"/>
+	
+	<!-- 右边 -->
+
+	<ImageView
+	    android:id="@+id/right"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content" 
+	    android:background="@drawable/ic_launcher"
+	    android:layout_toRightOf="@id/center"
+	    android:layout_alignBottom="@id/center"/>
+	
+	<!--下边  -->
+	<ImageView 
+	    android:id="@+id/bottom"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:background="@drawable/ic_launcher"
+	    android:layout_below="@id/center"
+	    android:layout_alignRight="@id/center"/>
+	
+
+</RelativeLayout>

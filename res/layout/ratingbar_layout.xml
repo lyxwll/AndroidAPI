@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/rating_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/a5" 
+        />
+
+    <!-- 定义一个星级评分条 -->
+    <RatingBar
+        android:id="@+id/rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:isIndicator="false"
+        android:max="255"
+        android:numStars="5"
+        android:stepSize="0.5" 
+       />
+    
+    
+    <!-- 使用这两个方法改变RatingBar的图片
+    	android:progressDrawable="@drawable/a" 
+     	android:indeterminateDrawable="@drawable/a"-->
+    
+    
+
+</LinearLayout>

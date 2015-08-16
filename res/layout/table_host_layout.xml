@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <!-- 定义第一个标签页的内容 -->
+    <LinearLayout 
+        android:id="@+id/tab01"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        
+        <TextView 
+            android:id="@+id/tab1_text1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        
+        <TextView 
+            android:id="@+id/tab1_text2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    
+    <!-- 定义第二个标签页的内容 -->
+    <LinearLayout 
+        android:id="@+id/tab02"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        
+        <TextView 
+            android:id="@+id/tab2_text1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        
+        <TextView 
+            android:id="@+id/tab2_text2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    
+    <!-- 定义第三个标签页的内容 -->
+    <LinearLayout 
+        android:id="@+id/tab03"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        
+        <TextView 
+            android:id="@+id/tab3_text1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        
+        <TextView 
+            android:id="@+id/tab3_text2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    
+
+</TabHost>

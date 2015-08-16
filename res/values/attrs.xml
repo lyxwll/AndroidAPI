@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--  -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    
+     <!-- 圆形控件的属性 -->
+    <declare-styleable name="CircleView">
+        <attr name="radius" format="integer" ></attr>
+        <attr name="centerX" format="integer" ></attr>
+        <attr name="centerY" format="integer" ></attr>
+        <attr name="bgcolor" format="color|reference" ></attr>
+    </declare-styleable>
+    
+</resources>

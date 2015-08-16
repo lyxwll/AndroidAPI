@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <!-- 通过background设置背景 -->
+    <TextView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="带边框且有背景颜色的文本"
+        android:textSize="15pt"
+        android:background="@drawable/bg_border"/>
+    
+    <!-- 通过drawableleft绘制一张图片 -->
+    <TextView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="带图片的文本,放在文本的左边"
+        android:drawableLeft="@drawable/a2"/>
+    
+    
+
+</LinearLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <!-- 普通的输入框 -->
+    <EditText 
+        android:id="@+id/input1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dip"
+        android:hint="@string/edit_text"
+        android:background="@drawable/bg_border"
+        android:textColor="@color/blue"
+        android:textColorHint="@color/common_red"
+        android:maxLines="4"
+        android:minLines="2"
+        android:gravity="top|left"/>
+    	
+    <Button 
+        android:id="@+id/get_msg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/getinput_msg"
+        android:shadowColor="@color/common_blue"
+        android:shadowDx="45.0"
+        android:shadowDy="15.0"
+        android:shadowRadius="25"/>
+    
+    
+    <!-- 只输入密码的编辑框 -->
+    <EditText 
+        android:id="@+id/password"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dip"
+        android:inputType="textPassword"
+        android:hint="@string/hello_password"
+        android:background="@drawable/bg_border"/>
+    
+    <!-- 不可输入的编辑框 -->
+    <EditText 
+        android:id="@+id/noedit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dip"
+        android:hint="@string/none_editable"
+        android:editable="false"
+       	android:background="@drawable/bg_border"/>
+    
+    <!-- 只能输入数字的编辑框 -->
+    <EditText 
+        android:id="@+id/number"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dip"
+        android:inputType="number"
+        android:hint="@string/number_edit"
+        android:background="@drawable/bg_border"/>
+    
+    
+
+</LinearLayout>

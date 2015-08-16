@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <!--  -->
+    <Spinner 
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:entries="@array/fruit_titles"
+        android:spinnerMode="dropdown"
+        android:popupBackground="@drawable/bg_border"
+        android:background="@drawable/login_bg"
+        android:prompt="@string/choice_fruit"
+        android:dropDownSelector="@drawable/spinner_dropdown_selector"/>
+    <Spinner 
+        android:id="@+id/spinner2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:spinnerMode="dropdown"
+        android:dropDownWidth="match_parent"
+        android:popupBackground="@drawable/login_bg"
+        android:background="@drawable/bg_border"
+        android:prompt="@string/choice_fruit"
+        android:dropDownSelector="@drawable/spinner_dropdown_selector"/>
+    <Spinner 
+        android:id="@+id/spinner3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:spinnerMode="dropdown"
+        android:popupBackground="@drawable/bg_border"
+         android:prompt="@string/choice_fruit"
+        android:dropDownSelector="@drawable/spinner_dropdown_selector"/>
+    
+    <!--  -->
+    <Button 
+        android:id="@+id/get_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    
+    
+
+</LinearLayout>

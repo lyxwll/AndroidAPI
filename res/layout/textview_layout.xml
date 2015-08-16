@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 设置不同字体,颜色的文本 -->
+    <!-- 设置字体为20pt -->
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="文字的字体不同,颜色也不同"
+        android:textSize="15pt" />
+
+    <!-- 设置中间内容省略 -->
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="middle"
+        android:singleLine="true"
+        android:text="字体不同,颜色也不同;字体不同,颜色也不同;字体不同,颜色也不同" />
+
+    <!-- 对邮件增加链接 -->
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:autoLink="email"
+        android:singleLine="true"
+        android:text="测试jyu4228716@163.com邮件的内容" 
+        android:textSize="10pt"/>
+
+    <!-- 设置文字的颜色,大小,并使用阴影 -->
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:shadowColor="#0000ff"
+        android:shadowDx="15.0"
+        android:shadowDy="20.0"
+        android:shadowRadius="45.0"
+        android:text="测试文字的颜色,大小"
+        android:textColor="#ff0000"
+        android:textSize="15pt" 
+        android:background="@drawable/bg_border"/>
+
+    <!-- 测试密码输入框 -->
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:text="@string/hello_password" />
+    
+    <ImageView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/a5"
+        android:background="@drawable/bg_border"/>
+
+
+</LinearLayout>

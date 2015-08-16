@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- clipOrientation:水平裁剪  居中显示 -->
+<clip xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:drawable="@drawable/a5"
+    android:clipOrientation="horizontal"
+    android:gravity="center">
+    
+</clip>

@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MyAndroidAPI</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+
+    <string name="none_layout">这个是代码生成的</string>
+    <string name="my_button">我的按钮</string>
+    <string name="images">图片浏览</string>
+    
+    <!-- TableLayout -->
+    <string name="change_butt">改变排列方式</string>
+    <string name="change_gravity">改变位置</string>
+    <string name="single_line">单独一行的按钮</string>
+    <string name="noraml_button">普通的按钮</string>
+    <string name="strech_button">拉伸的按钮</string>
+    <string name="shrink_button">收缩的按钮</string>
+    
+    <!-- EditTextView -->
+    <string name="view_text">文本视图</string>
+    <string name="edit_text">普通编辑框</string>
+    <string name="getinput_msg">获取输入内容</string>
+    <string name="hello_password">密码输入框</string>
+    <string name="none_editable">不可编辑框</string>
+    <string name="number_edit">数字编辑框</string>
+    
+    <!-- UserInterface:用户界面的String -->
+    <string name="login_interface">登陆界面</string>
+    <string name="username">用  户  名</string>
+    <string name="user_edit">请输入用户名</string>
+    <string name="userpwd">密        码</string>
+    <string name="edit_pwd">请输入密码</string>
+    <string name="repeat_pwd">重复密码</string>
+    <string name="repeat_editpwd">请重复输入的密码</string>
+    <string name="login_btn">登    录</string>
+    <string name="cancel_btn">取    消</string>
+    <string name="empty_name">用户名为空或少于6个字符</string>
+    <string name="empty_pwd">密码为空或少于8个字符</string>
+    <string name="pwd_not_same">两次密码不相同</string>
+    <string name="login_msg">正在登录中....</string>
+    
+    
+    <!-- Button和ImageButton -->
+    <string name="button1">内部类的监听事件</string>
+    <string name="button2">匿名内部类的监听事件</string>
+    <string name="button3">成员属性的监听事件</string>
+    <string name="button4">Activity的监听事件</string>
+    <string name="button5">布局文件指定事件的监听</string>
+    <string name="button6">ImageButton事件的监听</string>
+    
+    <!--  -->
+    <string name="gender">性别</string>
+    <string name="male">男性</string>
+    <string name="female">女性</string>
+    <string name="colors">喜欢的颜色</string>
+    <string name="blue">蓝色</string>
+    <string name="green">绿色</string>
+    <string name="red">红色</string>
+    <string name="yellow">黄色</string>
+	<string name="submit">提交信息</string>
+    
+	<!--  -->
+	<string name="togglebutton">开关按钮</string>
+	<string name="texton">纵向排列</string>
+	<string name="textoff">横向排列</string>
+	
+	<!--  -->
+	<string name="start">开始计时</string>
+	
+	<!--  -->
+	<string name="plus">增加透明度</string>
+	<string name="minus">减少透明度</string>
+	<string name="next">下一张</string>
+    
+	<!--  -->
+	<string-array name="fruit_titles">
+        <item >apple</item>
+        <item >little apple</item>
+        <item >big apple</item>
+        <item >banana</item>
+        <item >orange</item>
+        <item >peach</item>
+        <item >pear</item>
+    </string-array>
+    
+	<!--  -->
+	<string name="choice_fruit">请选择你喜欢的水果</string>
+	
+	<!-- ProgressBar -->
+	<string name="progress_show">当前进度值:</string>
+	<string name="show_progress">显示进度</string>
+	<string name="hide_progress">隐藏进度</string>
+	
+	<!-- Scoll -->
+	<string name="Scroll_Textview">我爱北京天安门,天安门上太阳升.伟大领袖毛主席,带领我们向前进.
+	    我爱北京天安门,天安门上太阳升.伟大领袖毛主席,带领我们向前进.</string>
+	
+	<!-- DialogActivity -->
+	<string name="dialog_show_btn">显示对话框</string>
+	<string name="dialog_title">对话框的标题</string>
+	<string name="dialog_title2">自定义对话框的标题</string>
+	<string name="dialog_title3">单选对话框的标题</string>
+	<string name="dialog_title4">多选对话框的标题</string>
+	<string name="dialog_title5">Adapter对话框的标题</string>
+	<string name="dialog_message">普通对话框的信息</string>
+	<string name="dialog_confirm_btn">确定</string>
+	<string name="dialog_dismiss_btn">消失</string>
+	<string name="dialog_cancle_btn">取消</string>
+	<string name="dialog_show_btn2">显示自定义对话框</string>
+	<string name="dialog_show_btn3">显示单选列表选项</string>
+	<string name="dialog_show_btn4">显示多选列表选项</string>
+	<string name="dialog_show_btn5">显示Adapter对话框</string>
+	<string name="dialog_show_btn6">显示DatePicker对话框</string>
+	<string name="dialog_show_btn7">显示TimerPicker对话框</string>
+	<string name="dialog_show_btn8">显示ProgressDialog对话框</string>
+	<string name="dialog_show_btn9">显示ActivityAsDialog对话框</string>
+	<string name="dialog_show_btn10">显示样式自定义对话框</string>
+	<string name="dialog_show_btn11">显示自定义风格对话框</string>
+	
+	<string name="show_popupwindows">显示popupWindows</string>
+	
+	<!-- Notification -->
+	<string name="show_notify">显示通知栏</string>
+	<string name="del_notify">取消通知</string>
+	<string name="custom_show_notify">显示通知栏</string>
+	<string name="custom_del_notify">取消通知</string>
+	<string name="ticker_text">ticker的显示</string>
+	<string name="tilte_notify">notify的标题</string>
+	<string name="content_notify">Notify的内容</string>
+	<string name="custom_notify_icon">Notify的图标</string>
+	<string name="custom_notify_title">自定义notify的标题</string>
+	<string name="custom_notify_ticker">自定义notify的ticker</string>
+	<string name="custom_notify_content">自定义notify的内容</string>
+    
+	<!-- Menu And Submenu -->
+	<string name="font_size">字体大小</string>
+	<string name="font_size_title">字体大小选项</string>
+	<string name="normal_menu">普通菜单</string>
+	<string name="font_size_10">10号字体</string>
+	<string name="font_size_12">12号字体</string>
+	<string name="font_size_14">14号字体</string>
+	<string name="font_size_16">16号字体</string>
+	<string name="font_size_18">18号字体</string>
+	<string name="color_menu">颜色菜单</string>
+	<string name="color_menu_title">颜色菜单选项</string>
+	<string name="color_red">红色</string>
+	<string name="color_grenn">绿色</string>
+	<string name="color_blue">蓝色</string>
+	
+	<!-- ContextMenu -->
+	<string name="context_menu">上下文菜单</string>
+	
+	<!-- Cofiguration -->
+	<string name="orientation">排列方式</string>
+	<string name="change_config_btn">改变配置方式</string>
+	
+	<!-- Preference -->
+	<string-array name="gender">
+	    <item >male</item>
+	    <item >female</item>
+	</string-array>
+	<string-array name="gender_value">
+	    <item >male</item>
+	    <item >female</item>
+	</string-array>
+	
+	<!--  -->
+	<string name="send_to">请求B的值</string>
+	
+	<!--  -->
+	<string name="start_component">启动Component</string>
+	
+	<!--  -->
+	<string name="bindservice">测试服务</string>
+	<string name="unbindservice">停止服务</string>
+	<string name="getcount">计数</string>
+	
+	<!--  -->
+	<string name="bit_image">assets目录下的图片</string>
+	<string name="bit_btn">查看assets目录下的图片</string>
+	<string name="circle">圆形</string>
+	<string name="square">正方形</string>
+	<string name="rectangle">矩形</string>
+	<string name="round_rect">圆角矩形</string>
+	<string name="oval">椭圆形</string>
+	<string name="triangle">三角形</string>
+	<string name="pentagon">五角星</string>
+	
+	<!--  -->
+	<string name="sin">sin</string>
+	<string name="cos">cos</string>
+	
+	<!--  -->
+	<string name="send_hint">发送消息</string>
+	
+	<!-- pull to refresh -->
+    <string name="pull_to_refresh">下拉可以刷新</string>  
+    <string name="release_to_refresh">释放立即刷新</string>  
+    <string name="refreshing">正在刷新…</string>  
+    <string name="not_updated_yet">暂未更新过</string>  
+    <string name="updated_at">上次更新于%1$s前</string>  
+    <string name="updated_just_now">刚刚更新</string>  
+    <string name="time_error">时间有问题</string>  
+    <!-- end -->
+    
+    <string name="load_more">加载更多......</string>
+    <string name="last_refresh_time">最后刷新时间: 2014.10.10 12:56:12</string>
+    
+    <!-- CalculateWeighte -->
+    <string name="calculate_title">计算你的标准体重</string>
+    <string name="sex_text">性别:</string>
+    <string name="height_text">身高:</string>
+    <string name="calculate_button">计算</string>
+    <string name="man">男</string>
+    <string name="woman">女</string>
+    <string name="back_button">返回上一页</string>
+	
+	
+	
+	
+	
+    
+	<!-- MainActivity -->
+    <string-array name="main_titles">
+        <item >None layout Button</item>
+        <item>CodeMixed 混合编码</item>
+        <item>Track ball 轨迹球</item>
+        <item >LinearLayout 线性布局</item>
+        <item >FrameLayout 帧布局</item>
+        <item >RelativeLayout 相对布局</item>
+        <item >AbsoluteLayout 绝对布局</item>
+        <item >TableLayout 网格布局</item>
+        <item >TextViewlayout 文本视图</item>
+        <item >TextView2layout 带边框,图片的视图</item>
+        <item >UserLogin 用户登录界面</item>
+        <item >EditTextView 编辑框实例</item>
+        <item >UserInterface 用户友好界面</item>
+        <item >ImageButton 图片按钮</item>
+        <item >RadioButton 单选按钮</item>
+        <item >ToggleButton 状态开关按钮</item>
+        <item>Clock 模拟和数字时钟</item>
+        <item>ImagesView 图片浏览</item>
+		<item>Rewards 刮刮奖</item>    
+		<item >AutCompleteTextView</item>  
+		<item >ListViewLayout</item>
+		<item >Spinner下拉列表框</item>
+		<item >GirdView 网格视图</item>
+		<item >GalleryView 画廊视图</item>
+		<item >ExpandableListView</item>
+		<item >DateTimePicker</item>
+		<item >ProgressBar 进度条</item>
+		<item> SeekBar 拉动进度条</item>
+		<item >RatingBar 星级评分条</item>
+		<item>TabHost 选项卡</item>
+		<item >ScrollView 滚动视图</item>
+		<item >Dialog 对话框</item>
+		<item >Toast 土司提示语</item>
+		<item >PopupWindows</item>
+		<item >NotifiCation通知</item>
+		<item >Menu and SubMenu</item>
+		<item >SingleOrMultiMenu</item>
+		<item >ContextMenu 上下文菜单</item>
+		<item >MyContainer event modle</item>
+		<item >Configuration</item>
+		<item >ChangeConfiguration</item>
+		<item >None Full Screen Activity</item>
+		<item >Transparentn Activity</item>
+		<item >MyLauncher and Preference</item>
+		<item >Android Launche Modle</item>
+		<item >Activity Parameter Deliver</item>
+		<item >ComponentAttr</item>
+		<item >Intent and Action Test</item>
+		<item >Fragment Test</item>
+		<item >FragmentLayoutActivity</item>
+		<item >ContentProviderTest</item>
+		<item >SQLiteDatabaseTest</item>
+		<item >SharedPreferenceTest存贮少量的数据</item>
+		<item >ImageScaleGestrue手势图片缩放</item>
+		<item >GestureFillper 手势翻页</item>
+		<item >DynamicBroadcast动态注册广播</item>
+		<item >Bind and unBind Service</item>
+		<item >Custom View Styable</item>
+		<item >RES ClipdrawAble</item>
+		<item >Animation Test</item>
+		<item >Test Raw Asset</item>
+		<item >Test XML Parser</item>
+		<item >使用Bitmap查看assets目录下的图片</item>
+		<item >Draw View Test</item>
+		<item >Test PathEffectView</item>
+		<item >Draw Text On path</item>
+		<item >Draw Bitmap View onPath</item>
+		<item >PinPang BALL Game View</item>
+		<item >MeshBitmap View 图片扭曲</item>
+		<item >Bomb Frame Animation </item>
+		<item >Surface View Test实现动画</item>
+		<item >Show Wave Sin and Cos</item>
+		<item >Client and Service Chat Socket</item>
+		<item >Test Network URl</item>
+		<item >Test Http URL Download</item>
+		<item >Test Bitmap Download</item>
+		<item >View Pager Test 拖拽滑动页面</item>
+		<item >Test Fragment View Pager</item>
+		<item >ViewPager TableHost Test</item>
+		<item >Test GPS Location Activity</item>
+		<item >Test Map Activity</item>
+		<item >Test Application Push</item>
+		<item >Test SwipeRefresh Layout</item>
+		<item >Test pull to Refresh下拉刷新</item>
+		<item >Test Down Refresh Up Load</item>
+		<item >Calculate Standard Weight</item>
+		<item ></item>
+		
+		
+		 
+     </string-array>
+        
+     
+</resources>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

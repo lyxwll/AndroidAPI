@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:background="@drawable/login_bg"
+        android:orientation="vertical" >
+        
+        <!-- 线性布局里的相对布局:用来存放TextView和editview 
+        	user_panel,pwd_panel,repeat_panel都在里面布局-->
+        <RelativeLayout 
+            android:layout_width="match_parent"
+            android:layout_height="140dip"
+            android:layout_gravity="center"
+            android:gravity="center">
+            
+            <!-- 重复密码,所在的框架:定义在一个线性布局中 -->
+            <!-- marginBottom:下边距;alignParentBottom:与父容器的底部对齐 -->
+            <LinearLayout 
+                android:id="@+id/repeat_panel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dip"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="2dip"
+                android:orientation="horizontal">
+                
+                <!-- 当width=0时,就需要设置weight:比重 -->
+                <TextView 
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:text="@string/repeat_pwd"/>
+                <EditText 
+                    android:id="@+id/repeat_pwd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.9"
+                    android:background="@drawable/edit_text_bg"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:singleLine="true"/>
+            </LinearLayout>
+            
+            <!-- 密码,所在的框架:定义在一个线性布局中 
+            	above:在重复密码,的上边-->
+            <LinearLayout 
+                android:id="@+id/pwd_panel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/repeat_panel"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:orientation="horizontal">
+                
+                <!-- TextView和EditView的weight为:0.4,0.6 -->
+                <TextView 
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:text="@string/userpwd"/>
+                
+                <!-- nextfocusDown:定义下一步时聚焦的位置 -->
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" 
+                    android:layout_weight="0.9"
+                    android:background="@drawable/edit_text_bg"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:nextFocusDown="@id/repeat_pwd"/>
+            </LinearLayout>
+            
+            <!-- 用户名所在的框架:也定义再一个线性布局中 -->
+            <LinearLayout 
+                android:id="@+id/user_panel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_above="@+id/pwd_panel"
+                android:orientation="horizontal">
+                
+                <TextView 
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:text="@string/username"/>
+                
+                <EditText 
+                    android:id="@+id/username"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.9"
+                    android:background="@drawable/edit_text_bg"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:nextFocusDown="@id/password"/>
+            </LinearLayout>
+                   
+        </RelativeLayout>
+        
+             
+           <!-- 登录,取消按钮:也是定义在一个线性布局中,但在相对布局的外面 -->
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:orientation="horizontal">
+                <!-- 登录按钮 -->
+                <Button 
+                    android:id="@+id/login_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/login_btn"/>
+                <!-- 取消按钮 -->
+                <Button 
+                    android:id="@+id/cancel_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/cancel_btn"/>
+            </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cloudy.androidapi"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <!-- 声明一个自定义的权限 -->
+    <permission
+        android:name="com.cloudy.myandroidapi"
+        android:protectionLevel="normal" >
+    </permission>
+    <permission
+        android:name="com.cloudy.order"
+        android:protectionLevel="normal" >
+    </permission>
+    <permission
+        android:name="com.cloudy.reply"
+        android:protectionLevel="normal" >
+    </permission>
+    <permission
+        android:name="com.cloudy.rescue"
+        android:protectionLevel="normal" >
+    </permission>
+
+    <!-- MyFileExplorer -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <!-- Configuration -->
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+
+    <!-- Intent:Data -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <!-- ReadContactsActivity -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <!-- TestNetworkURLActivity -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    
+    <!-- SingleDownloadUtil -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <!--   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" /> -->
+
+    <!-- TestLocationActivity -->
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" >
+    </uses-permission>
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" >
+    </uses-permission>
+    <!-- 允许应用读取低级别的系统日志文件 -->
+    <uses-permission android:name="android.permission.READ_LOGS" >
+    </uses-permission>
+
+    <!-- TestMapActivity -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    
+    <!-- Test Push -->
+     <!-- 接收开机完成广播 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <!-- 取消锁屏 -->
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    
+
+    <!-- MainActivity -->
+    <application
+        android:name="com.cloudy.androidapi.applicationpush.MyAndroidApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.cloudy.androidapi.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <!-- 在百度开发者中心查询应用的API Key -->
+        <meta-data android:name="api_key" android:value="RGO9MLphdpdZDV1DXGwXEQC5" />
+        
+         <!-- push富媒体，不使用富媒体推送不需要 -->
+        <activity
+            android:name="com.baidu.android.pushservice.richmedia.MediaViewActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="MediaViewActivity" >
+        </activity>
+        <activity
+            android:name="com.baidu.android.pushservice.richmedia.MediaListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="MediaListActivity"
+            android:launchMode="singleTask" >
+        </activity>
+        <!-- push富媒体结束 -->
+        
+        <receiver android:name="com.cloudy.androidapi.applicationpush.MyPushMessageReceiver">
+ 		    <intent-filter>
+                <!-- 接收push消息 -->
+                <action android:name="com.baidu.android.pushservice.action.MESSAGE" />
+                <!-- 接收bind,unbind,fetch,delete等反馈消息 -->
+                <action android:name="com.baidu.android.pushservice.action.RECEIVE" />
+                <action android:name="com.baidu.android.pushservice.action.notification.CLICK" />
+            </intent-filter>
+ 		</receiver>
+ 		
+ 		<!-- push必须的receviver和service声明 -->
+        <receiver android:name="com.baidu.android.pushservice.PushServiceReceiver"
+            android:process=":bdservice_v1">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="com.baidu.android.pushservice.action.notification.SHOW" />
+                <action android:name="com.baidu.android.pushservice.action.media.CLICK" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.baidu.android.pushservice.RegistrationReceiver"
+            android:process=":bdservice_v1">
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.METHOD" />
+                <action android:name="com.baidu.android.pushservice.action.BIND_SYNC" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package" />
+            </intent-filter>                   
+        </receiver>
+        <service
+            android:name="com.baidu.android.pushservice.PushService"
+            android:exported="true"
+            android:process=":bdservice_v1" >
+            <intent-filter >
+                <action android:name="com.baidu.android.pushservice.action.PUSH_SERVICE"/>
+            </intent-filter>
+        </service>
+        <!-- push结束 -->
+
+        <!-- TestmapActivity -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="6AfYYX4zTrlyENNKsFFrTOLk" />
+        <!--
+       TestLocationActivity
+             用SDK5.0需要在Mainfest.xml设置Accesskey，
+             设置有误会引起定位和地理围栏服务不能正常使用，必须进行Accesskey的正确设置。
+        -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="TawYGk3PE5RcPmYUFZkHsxbA" /> <!-- key:开发者申请的key -->
+
+        <!-- 百度地图 定位服务 -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
+
+        <activity android:name="com.cloudy.androidapi.layout.TrackBallActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.layout.CodeMixedLayoutActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.layout.NoneLayoutActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.layout.LinearLayoutActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.layout.FrameLayoutActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.layout.RelativeLayoutActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.layout.AbsoluteLayoutActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.layout.TableLayoutActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.layout.TextViewlayoutActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.layout.TextView2layoutActivity" >
+        </activity>
+        <activity
+            android:name="com.cloudy.androidapi.layout.UserLoginlayoutActivity"
+            android:label="@string/login_interface" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.layout.EditTextActivity" >
+        </activity>
+        <activity
+            android:name="com.cloudy.androidapi.activity.UserInterfaceActivity"
+            android:label="@string/login_interface" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.activity.ButtonLayoutActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.activity.RadioCheckActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.activity.ToggleButtonActivit" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.activity.ClockLayoutActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.layout.ImagesViewLayoutActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.activity.RewardsActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.activity.AutoCompleteTextviewview" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.activity.ListViewActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.activity.SpinnerLayoutActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.activity.GridViewActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.activity.GalleryActitvity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.activity.ExpandableListViewActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.activity.DateTimePickerActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.activity.ProgressBarActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.activity.SeekBarActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.activity.RatingBarActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.activity.TabHostActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.activity.ScrollViewActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.activity.DialogActivity" >
+        </activity>
+        <activity
+            android:name="com.cloudy.androidapi.activity.ActivityAsDialog"
+            android:theme="@style/ActivityAsDialog" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.activity.ToastActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.activity.PopupWindowActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.activity.NotificationActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.activity.MenuActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.activity.SingleOrMultiMenueActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.activity.ContextMenuActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.activity.TestContainerActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.activity.ConfigrutionActivity" >
+        </activity>
+        <activity
+            android:name="com.cloudy.androidapi.activity.ConfigrutionTestActivity"
+            android:configChanges="orientation|screenLayout|screenSize" >
+        </activity>
+        <activity
+            android:name="com.cloudy.androidapi.activity.TransparentActivity"
+            android:theme="@style/TransparentActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.activities.PreferenceTest" >
+        </activity>
+        <activity
+            android:name="com.cloudy.androidapi.activities.MyLuancher"
+            android:enabled="true"
+            android:exported="true"
+            android:icon="@drawable/fruit_pear"
+            android:label="Myluancher"
+            android:logo="@drawable/fruit_orange"
+            android:multiprocess="true"
+            android:screenOrientation="portrait" >
+
+            <!--
+            <intent-filter >
+                用于创建一个新的LAUNCHER,显示icon和logo
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            -->
+        </activity>
+        <activity android:name="com.cloudy.androidapi.activities.LaunchModeTest" >
+        </activity>
+        <activity
+            android:name="com.cloudy.androidapi.activities.LaunchModeStandard"
+            android:label="LaunchModeStandard"
+            android:launchMode="standard" >
+        </activity>
+        <activity
+            android:name="com.cloudy.androidapi.activities.LaunchModeSingleTop"
+            android:label="LaunchModeSingleTop"
+            android:launchMode="singleTop" >
+        </activity>
+        <activity
+            android:name="com.cloudy.androidapi.activities.SingleTopOtherActivity"
+            android:label="SingleTopOtherActivity" >
+        </activity>
+        <activity
+            android:name="com.cloudy.androidapi.activities.LaunchModeSingleTask"
+            android:exported="true"
+            android:label="LaunchModeSingleTask"
+            android:launchMode="singleTask"
+            android:multiprocess="true" >
+        </activity>
+        <activity
+            android:name="com.cloudy.androidapi.activities.SingleTaskOtherActivity"
+            android:label="SingleTaskOtherActivity" >
+        </activity>
+        <activity
+            android:name="com.cloudy.androidapi.activities.LaunchModeSingleInstance"
+            android:exported="true"
+            android:label="LaunchModeSingleInstance"
+            android:launchMode="singleInstance"
+            android:multiprocess="true" >
+        </activity>
+        <activity
+            android:name="com.cloudy.androidapi.activities.SingleInstanceOtherActivity"
+            android:label="SingleInstanceOtherActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.activities.ActivityA" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.activities.ActivityB" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.intent.ComponentAttr" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.intent.ComponentSecond" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.intent.ActionActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.intent.IntentTest" >
+        </activity>
+        <activity
+            android:name="com.cloudy.androidapi.intent.ReceiveActionA"
+            android:label="ReceiveActionA" >
+            <intent-filter>
+                <action android:name="com.cloudy.androidapi.intent.ActionActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cloudy.androidapi.intent.ReceiveActionB"
+            android:label="ReceiveActionB" >
+            <intent-filter>
+                <action android:name="com.cloudy.androidapi.intent.ActionActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.cloudy.androidapi.intent.CategoryActivity" >
+        </activity>
+        <activity
+            android:name="com.cloudy.androidapi.intent.ReceiveCategoryA"
+            android:label="ReceiveCategoryA" >
+            <intent-filter>
+                <action android:name="com.cloudy.androidapi.intent.CategoryActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.cloudy.androidapi.intent.MY_CATEGORY" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cloudy.androidapi.intent.ReceiveCategoryB"
+            android:label="ReceiveCategoryB" >
+            <intent-filter>
+                <action android:name="com.cloudy.androidapi.intent.CategoryActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.cloudy.androidapi.intent.MY_CATEGORY" />
+                <category android:name="android.intent.category.CAR_DOCK" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.cloudy.androidapi.intent.DataActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.fragment.FragmentTestActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.fragment.StaticFragmentActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.fragment.FragmentLayoutActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.fragment.FragmentLayoutActivity$DetailsActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.fragment.WeixinFragmentActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.contentprovider.ContentProviderActivityTest" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.contentprovider.ReadContactsActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.database.SQLiteDatabaseTest" >
+        </activity>
+
+        <provider
+            android:name="com.cloudy.androidapi.contentprovider.StudentProvider"
+            android:authorities="com.cloudy.androidapi.contentprovider"
+            android:exported="true" >
+        </provider>
+
+        <activity android:name="com.cloudy.androidapi.database.SharedPreferenceTest" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.gesture.ImageScaleGestrue" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.gesture.GestureFillPer" >
+        </activity>
+
+        <receiver
+            android:name="com.cloudy.androidapi.broadcastreceiver.MyBroadcastReceiver"
+            android:exported="true"
+            android:permission="com.cloudy.myandroidapi" >
+            <intent-filter>
+                <action android:name="com.cloudy.start_launchmodetest" />
+                <action android:name="com.cloudy.start_fragmenttestactivity" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.cloudy.androidapi.broadcastreceiver.SpyA" >
+            <intent-filter>
+                <action android:name="com.cloudy.rescue" />
+                <action android:name="com.cloudy.start" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.cloudy.androidapi.broadcastreceiver.SpyB" >
+            <intent-filter>
+                <action android:name="com.cloudy.order" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.cloudy.androidapi.broadcastreceiver.SpyC" >
+            <intent-filter>
+                <action android:name="com.cloudy.order" />
+                <action android:name="com.cloudy.rescue" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="com.cloudy.androidapi.broadcastreceiver.DynamicBroadcast" >
+        </activity>
+
+        <service android:name="com.cloudy.androidapi.service.MyService" >
+            <intent-filter>
+                <action android:name="com.cloudy.start" />
+            </intent-filter>
+        </service>
+
+        <activity android:name="com.cloudy.androidapi.service.MyServiceTestActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.customview.TestCircleView" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.res.TestClipActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.animation.TestAnimationActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.res.TestRawAssetActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.xml.XmlActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.bitmap.BitmapTestActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.bitmap.MyDrawViewActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.bitmap.TestPathEffectActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.bitmap.DrawTextOnPath" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.bitmap.DrawBitmapViewActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.bitmap.PinPangBallActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.bitmap.MeshBitmapActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.bitmap.BombAnimationActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.bitmap.SurfaceViewActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.bitmap.ShowWaveActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.internet.ClientSocketActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.internet.TestNetworkURLActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.http.TestHttpURLActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.internet.bitmap.TestBitmapDownloadActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.view.ViewPagerActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.view.TestFragementViewPager" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.view.ViewPagerTableHost" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.mymap.TestLocationActivity" >
+        </activity>
+        <activity android:name="com.cloudy.androidapi.mymap.TestMapActivity"></activity>
+        <activity android:name="com.cloudy.androidapi.applicationpush.TestPush"></activity>
+        <activity android:name="com.cloudy.androidapi.view.TestSwipeRefreshLayout"></activity>
+        <activity android:name="com.cloudy.androidapi.view.TestRefreshListView"></activity>
+        <activity android:name="com.cloudy.androidapi.view.TestDownRefreshUpLoad"></activity>
+        <activity android:name="com.cloudy.androidapi.activities.CalculateWeightActivity"></activity>
+        <activity android:name="com.cloudy.androidapi.activities.CalculateResultsActivity"></activity>
+    </application>
+
+</manifest>

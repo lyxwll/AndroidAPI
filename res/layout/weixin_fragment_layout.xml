@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    
+    <fragment 
+        android:id="@+id/title_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_alignParentTop="true"
+        class="com.cloudy.androidapi.fragment.HeaderStaticFragment"/>
+    
+    <LinearLayout 
+        android:id="@+id/bottom_weixin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/transparent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/bottom_weixin1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/fruit_big_apple"
+            android:gravity="center"
+            android:text="微信" />
+        <TextView
+            android:id="@+id/bottom_weixin2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/fruit_little_apple"
+            android:gravity="center"
+            android:text="朋友" />
+        <TextView
+            android:id="@+id/bottom_weixin3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/fruit_orange"
+            android:gravity="center"
+            android:text="通讯录" />
+        <TextView
+            android:id="@+id/bottom_weixin4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/fruit_peach"
+            android:gravity="center"
+            android:text="设置" />
+        
+    </LinearLayout>
+    
+     <FrameLayout 
+        android:id="@+id/content_weixin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_fragment"
+        android:layout_above="@id/bottom_weixin"></FrameLayout>
+    
+
+</RelativeLayout>

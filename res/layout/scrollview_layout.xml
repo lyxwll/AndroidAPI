@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 定义一个ScrollView,为里面的控件添加垂直滚动条 -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/vertical_scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:overScrollMode="always">
+
+    <!--
+          在垂直滚动条内定义一个HorizontalScrollView,
+	  为里面的控件添加水平滚动条
+    -->
+
+    <HorizontalScrollView
+        android:id="@+id/horizontal_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:overScrollMode="always">
+
+        <LinearLayout
+            android:id="@+id/scroll_content"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</ScrollView>
